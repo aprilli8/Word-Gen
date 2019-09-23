@@ -11,7 +11,6 @@ public class Table{
     initialChars = new Vector<Association<String, FrequencyList>>();
     for(int i = 0; i < input.length()-k; i++){
       addTableElem(input.substring(i,i+k));
-      System.out.println(input.substring(i,i+k));
     }
   }
 

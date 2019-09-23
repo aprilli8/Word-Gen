@@ -1,3 +1,5 @@
+//I am the sole author of the work in this repository.
+
 import structure5.*;
 import java.util.Scanner;
 import java.util.Random;
@@ -8,7 +10,6 @@ public class FrequencyList{
 
   private static Random rand = new Random();
 
-  //Creates new FrequencyList Vector
   public FrequencyList(){
     thirdChar = new Vector<Association<String, Integer>>();
     freqListSum = 0;
@@ -36,14 +37,4 @@ public class FrequencyList{
     }
     return "";
   }
-
-/*
-  public static void main(String[] args){
-    FrequencyList test = new FrequencyList("a");
-    System.out.println(test.getLetter(0));
-    System.out.println(test.getCount(0));
-    test.addCount("a");
-    System.out.println(test.getCount(0));
-  }
-*/
 }

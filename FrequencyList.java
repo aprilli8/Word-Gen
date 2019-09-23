@@ -4,27 +4,39 @@ import java.util.Random;
 
 public class FrequencyList{
   private Vector<Association<String, Integer>> thirdChar;
+  private int freqListSum;
 
-  public FrequencyList(String letter){
+  private static Random rand = new Random();
+
+  //Creates new FrequencyList Vector
+  public FrequencyList(){
     thirdChar = new Vector<Association<String, Integer>>();
-    thirdChar.add(new Association<String, Integer>(letter, new Integer(1)));
+    freqListSum = 0;
   }
 
-  public String getLetter(int index){
-    return (thirdChar.get(index)).getKey();
+  public void addNewElem(String let){
+    int index = thirdChar.indexOf(new Association<String, Integer>(let, null));
+    if(index == -1){
+      thirdChar.add(new Association<String, Integer>(let, 1));
+    }
+    else{
+      thirdChar.get(index).setValue(thirdChar.get(index).getValue()+1);
+    }
+    freqListSum++;
   }
 
-  public int getCount(int index){
-    return (thirdChar.get(index)).getValue();
-  }
-
-  public void addCount(String let){
+  public String pickNext(){
+    int num = rand.nextInt(freqListSum)+1;
+    int tally = 0;
     for(int i = 0; i < thirdChar.size(); i++){
-      if(((thirdChar.get(i)).getKey()).equals(let) == true){
-        (thirdChar.get(i)).setValue((thirdChar.get(i)).getValue()+1);
+      tally = tally + (thirdChar.get(i)).getValue();
+      if(num < tally){
+        return (thirdChar.get(i)).getKey();
       }
     }
+    return "";
   }
+
 /*
   public static void main(String[] args){
     FrequencyList test = new FrequencyList("a");

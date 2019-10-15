@@ -1,3 +1,5 @@
+//$ No documentation :( this makes it hard to figure out what is happening in this class
+
 //I am the sole author of the work in this repository.
 
 import structure5.*;
@@ -27,6 +29,7 @@ public class FrequencyList{
   }
 
   public String pickNext(){
+	  //$(-1) there is a bug here--the first character can never be chosen
     int num = rand.nextInt(freqListSum)+1;
     int tally = 0;
     for(int i = 0; i < thirdChar.size(); i++){
@@ -35,6 +38,9 @@ public class FrequencyList{
         return (thirdChar.get(i)).getKey();
       }
     }
+    //$ this should produce some error message, as you do not ever want to get here
+    //$(but you actually do!)
+    //$In some ways this is a second bug
     return "";
   }
 }

@@ -11,3 +11,4 @@ _Self Check_ Problem 3.4: What is the difference between the remove(v) method (v
 
 Problem 3.6: Consider a fictional class called BitVector that has an interface similar to Vector, but the values stored within the BitVector are all known to be boolean (the primitive type). What is the primary advantage of having a special-purpose vector, like BitVector?
   * *The primary advantage of having a special-purpose vector is that all the elements of the vector are of the same type. This eliminates a lot of opportunities for error when trying to change between types when using different methods in the class.*
+*$(-1) this is solved with generics.  What other advantages might there be?

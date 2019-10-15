@@ -1,5 +1,6 @@
 //I am the sole author of the work in this repository.
 
+
 import structure5.*;
 import java.util.Scanner;
 import java.util.Random;
@@ -17,7 +18,8 @@ public class WordGen{
   public static void main(String[] args){
     int kLevel = Integer.parseInt(args[0]);
 
-    System.out.print("Enter text: ");
+    //$ would be much nicer if could read in a file
+    //System.out.print("Enter text: ");
     StringBuffer textBuffer = new StringBuffer();
     while (scan.hasNextLine()){
       String line = scan.nextLine();

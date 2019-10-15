@@ -1,3 +1,4 @@
+//$ No documentation :( Hard to read through this and understand without comments
 //I am the sole author of the work in this repository.
 
 import structure5.*;
@@ -30,6 +31,7 @@ public class Table{
   public String pickNext(String letters){
     int index = initialChars.indexOf(new Association<String, FrequencyList>(letters, null));
     if(index == -1){
+	    //$(-1) this is not a sufficient way to handle this case
       System.out.println("Error");
     }
     else{
